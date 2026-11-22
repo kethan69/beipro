@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Calculate product costs, selling prices and profits in Kenya.">
+  <title>BeiPro | Smart Pricing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">B</div>
+      <div>
+        <h1>BeiPro</h1>
+        <span>SMART BUSINESS TOOLS</span>
+      </div>
+    </div>
+    <div class="currency-tag">KES 🇰🇪</div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">YOUR BUSINESS, BETTER NUMBERS</span>
+      <h2>Know your price.<br><span>Protect your profit.</span></h2>
+      <p>Calculate what it costs to sell, what you should charge, and what you actually earn.</p>
+    </section>
+
+    <section class="calculator-card">
+      <div class="section-heading">
+        <div>
+          <h3>Pricing calculator</h3>
+          <p>Enter your costs below</p>
+        </div>
+        <span class="calculator-icon">⌗</span>
+      </div>
+
+      <div class="field">
+        <label for="productName">Product name <span>OPTIONAL</span></label>
+        <input type="text" id="productName" placeholder="e.g. Liquid soap, T-shirt">
+      </div>
+
+      <div class="field">
+        <label for="baseCost">Buying / production cost</label>
+        <div class="input-wrap">
+          <span>KSh</span>
+          <input type="number" id="baseCost" placeholder="0.00" min="0" step="0.01">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="transport">Transport</label>
+          <div class="input-wrap">
+            <span>KSh</span>
+            <input type="number" id="transport" placeholder="0" min="0" step="0.01">
+          </div>
+        </div>
+        <div class="field">
+          <label for="packaging">Packaging</label>
+          <div class="input-wrap">
+            <span>KSh</span>
+            <input type="number" id="packaging" placeholder="0" min="0" step="0.01">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="otherCosts">Other costs</label>
+        <div class="input-wrap">
+          <span>KSh</span>
+          <input type="number" id="otherCosts" placeholder="0" min="0" step="0.01">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="margin">Desired profit margin</label>
+        <div class="input-wrap percent-wrap">
+          <input type="number" id="margin" value="30" min="0" max="99.99" step="0.1">
+          <span>%</span>
+        </div>
+        <div class="quick-margins">
+          <button type="button" data-margin="15">15%</button>
+          <button type="button" data-margin="25">25%</button>
+          <button type="button" data-margin="30" class="active">30%</button>
+          <button type="button" data-margin="40">40%</button>
+          <button type="button" data-margin="50">50%</button>
+        </div>
+      </div>
+
+      <button type="button" class="reset-btn" id="resetBtn">↻ Reset calculator</button>
+    </section>
+
+    <section class="results-card">
+      <div class="results-header">
+        <span class="eyebrow">YOUR RESULTS</span>
+        <span class="live-indicator"><span></span> LIVE</span>
+      </div>
+
+      <div class="price-result">
+        <p>Suggested selling price</p>
+        <h2 id="sellingPrice">KSh 0.00</h2>
+        <p id="productLabel">Your product</p>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-box profit-box">
+          <span>Profit per unit</span>
+          <strong id="profit">KSh 0.00</strong>
+        </div>
+        <div class="result-box">
+          <span>Total cost</span>
+          <strong id="totalCost">KSh 0.00</strong>
+        </div>
+        <div class="result-box">
+          <span>Markup</span>
+          <strong id="markup">0%</strong>
+        </div>
+        <div class="result-box">
+          <span>Break-even price</span>
+          <strong id="breakEven">KSh 0.00</strong>
+        </div>
+      </div>
+
+      <p class="results-note">Calculations are estimates based on the costs you enter. Remember to account for taxes, losses, discounts and operating expenses.</p>
+    </section>
+
+    <footer>
+      <p>BeiPro <span>•</span> Make smarter business decisions.</p>
+      <p class="footer-small">Built for hustlers, makers & small businesses in Kenya 🇰🇪</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
